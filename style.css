@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+header{
+    width: 100%;
+    height: 500px;
+    background-image: url(https://i.pinimg.com/originals/b5/9e/0f/b59e0fe666615f9c4b0d19f5b5962509.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#heading{
+    padding: 50px;
+    border-radius: 24px ;
+    border: none;
+    text-align: center;
+    backdrop-filter: blur(50px);
+    color: rgb(18, 57, 116);
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+#heading:hover{
+    transition: all 2s;
+    color: rgb(23, 63, 23);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(90px);
+    overflow: hidden;
+}
+
+.facts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    padding: 25px 20px;
+    gap: 2rem;
+    background-color: rgb(30, 124, 30);
+}
+
+#know{
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 50%;
+    color: rgb(230, 230, 75);
+}
+
+#know p{
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: rgba(224, 224, 72, 0.699);
+}
+
+#thinking{
+    position: relative;
+    background-color: rgb(219, 219, 69);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#thinking-img{
+    position: relative;   
+    overflow: hidden;
+    justify-self: center;
+}
+
+@media screen and (max-width: 600px) {
+    .facts{
+        flex-wrap: wrap;
+    }
+
+    #know{
+        width: 100%;
+    }
+}
+
+.why{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    gap: 2rem;
+    background-color: rgb(22, 36, 83);
+}
+
+#why-earth{
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 50%;
+    color: white;
+}
+
+#why-earth p{
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: rgb(187, 184, 184);
+}
+
+#earth-rocket{
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#earth-rocket-img{
+    width: 300px;
+    border-radius: 50%;
+    position: relative;   
+    overflow: hidden;
+    justify-self: center;
+}
+
+@media screen and (max-width: 600px) {
+    .why{
+        flex-wrap: wrap;
+    }
+
+    #why-earth{
+        width: 100%;
+    }
+}
