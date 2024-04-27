@@ -28,11 +28,20 @@ body{
 
 #earth-day p{
     color: white;
+    flex: 1;
+    width: 75%;
 }
+
+@media screen and (max-width: 600px) {
+    #earth-day{
+        justify-content: space-between;
+    }
+}
+
 
 .wrapper{
     height: 100%;
-    width: 300px;
+    width: 100px;
     position: relative;
     z-index: 100;
 }
@@ -315,6 +324,14 @@ header{
     justify-self: center;
 }
 
+@media screen and (max-width: 600px) {
+    #reduce li, #volunteer li, #conserve li, #plant li, #educate li{
+        width: 100%;
+    }
+    #volunteer, #plant{
+        flex-flow: column-reverse;
+    }
+}
 .action-call{
     padding-top: 25px;
     padding-bottom: 25px;
@@ -426,6 +443,12 @@ header{
     color: lightblue;
 }
 
+@media screen and (max-width: 600px) {
+    .events p{
+        width: 350px;
+    }
+}
+
 footer{
     padding-top: 25px;
     padding-bottom: 25px;
@@ -452,4 +475,13 @@ footer img {
     object-fit: cover;
     overflow: hidden;
     border-radius: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    footer{
+        font-size: 2rem;
+    }
+    footer p{
+        width: 350px;
+    }
 }
