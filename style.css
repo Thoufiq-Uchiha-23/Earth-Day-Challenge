@@ -14,6 +14,117 @@ body{
     box-sizing:border-box;
 }
 
+#earth-day{
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(22, 36, 83);
+}
+
+#earth-day p{
+    color: white;
+}
+
+.wrapper{
+    height: 100%;
+    width: 300px;
+    position: relative;
+    z-index: 100;
+}
+.wrapper .menu-btn{
+    right: 20px;
+    position: absolute;
+    /* left: 20px; */
+    top: 20px;
+    background: yellow;
+    color: black;
+    height: 45px;
+    width: 45px;
+    z-index: 999;
+    border: 1px solid rgb(224, 224, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  #btn:checked ~ .menu-btn{
+    left: 0px;
+  }
+  .wrapper .menu-btn i{
+    position: absolute;
+    transform: ;
+    font-size: 23px;
+    transition: all 0.3s ease;
+  }
+  .wrapper .menu-btn i.fa-times{
+    opacity: 0;
+  }
+  #btn:checked ~ .menu-btn i.fa-times{
+    opacity: 1;
+    transform: rotate(-180deg);
+  }
+  #btn:checked ~ .menu-btn i.fa-bars{
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  #sidebar{
+    position: fixed;
+    background: #404040;
+    height: 100%;
+    width: 270px;
+    overflow: hidden;
+    left: -270px;
+    transition: all 0.3s ease;
+  }
+  #btn:checked ~ #sidebar{
+    left: 0;
+  }
+  #sidebar .title{
+    line-height: 65px;
+    text-align: center;
+    background: rgb(22, 36, 83);
+    font-size: 25px;
+    font-weight: 600;
+    color: #f2f2f2;
+    border-bottom: 1px solid #222;
+  }
+  #sidebar .list-items{
+    position: relative;
+    background: black;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+  }
+  #sidebar .list-items li{
+    padding: 10px 20px;
+    line-height: 30px;
+    transition: all 0.3s ease;
+  }
+  #sidebar .list-items li:hover{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0px 10px 3px #222;
+  }
+  #sidebar .list-items li:first-child{
+    border-top: none;
+  }
+  #sidebar .list-items li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
 header{
     width: 100%;
     height: 500px;
@@ -140,4 +251,205 @@ header{
     #why-earth{
         width: 100%;
     }
+}
+
+#help{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 20px;
+    font-size: 1.5rem;
+    gap: 2rem;
+    font-weight: 500;
+    background-color: rgb(219, 219, 69);
+}
+
+#help h2, #help p{
+    color: rgb(30, 124, 30);
+}
+
+#help p{
+    width: 600px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    #help{
+        flex-wrap: wrap;
+    }
+
+    #help p{
+        width: 100%;
+    }
+}
+#steps{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+}
+
+#reduce, #volunteer, #conserve, #plant, #educate{
+    position: relative;
+    border-radius: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#reduce li, #volunteer li, #conserve li, #plant li, #educate li{
+    list-style: none;
+    font-size: 40px;
+    font-weight: 700;
+    width: 50%;
+    text-align: center;
+}
+
+#reduce img, #volunteer img, #conserve img, #plant img, #educate img {
+    width: 300px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.action-call{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    background-color: rgb(22, 36, 83);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.action-call h2{
+    color: white;
+    line-height: 100px;
+}
+
+.action-call p{
+    font-size: 1.3rem;
+    width: 600px;
+    text-align: center;
+    color: rgb(187, 184, 184);
+}
+
+.action-call a{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 10px 30px;
+    background-color: rgb(77, 190, 228);
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    color: rgb(22, 36, 83);
+}
+
+.action-call a:hover{
+    transition: all 2s;
+    background-color: rgb(53, 180, 53);
+}
+
+@media screen and (max-width: 600px) {
+    .action-call p{
+        width: 320px;
+    }
+}
+
+.testimonial{
+    width: 100%;
+    background-color: rgb(219, 219, 69);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.testimonial h2{
+    color: black;
+    line-height: 100px;
+}
+
+.testimonial img{
+    border-radius: 20px;
+}
+
+.testimonial p{
+    font-size: 1.3rem;
+    width: 600px;
+    text-align: center;
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    .testimonial p{
+        width: 350px;
+    }
+}
+
+.events{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    background-color: rgb(22, 36, 83);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.events h2{
+    color: white;
+    line-height: 100px;
+}
+
+.events p{
+    font-size: 1.3rem;
+    width: 600px;
+    text-align: center;
+    color: white;
+}
+
+.events a{
+    color: lightblue;
+}
+
+footer{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(22, 36, 83);
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer p{
+    width: 600px;
+    text-align: center;
+    color: rgb(22, 148, 22);
+}
+
+footer img {
+    width: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 30px;
 }
