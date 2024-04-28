@@ -116,6 +116,17 @@ body{
     line-height: 30px;
     transition: all 0.3s ease;
   }
+
+  #sidebar .list-items li .links span{
+    color: white;
+  }
+
+  #sidebar .list-items li .links{
+    display: flex;
+    padding: 10px 20px;
+    line-height: 30px;
+    transition: all 0.3s ease;
+  }
   #sidebar .list-items li:hover{
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
@@ -207,6 +218,7 @@ header{
 @media screen and (max-width: 600px) {
     .facts{
         flex-wrap: wrap;
+        height: auto;
     }
 
     #know{
@@ -255,6 +267,7 @@ header{
 @media screen and (max-width: 600px) {
     .why{
         flex-wrap: wrap;
+        height: auto;
     }
 
     #why-earth{
@@ -314,6 +327,7 @@ header{
     font-weight: 700;
     width: 50%;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #reduce img, #volunteer img, #conserve img, #plant img, #educate img {
@@ -324,12 +338,25 @@ header{
     justify-self: center;
 }
 
+#reduce img:hover, #volunteer img:hover, #conserve img:hover, #plant img:hover, #educate img:hover {
+    box-shadow: 10px 10px 20px rgb(1, 90, 1);
+    transition: all 0.3s ease;
+}
+
 @media screen and (max-width: 600px) {
     #reduce li, #volunteer li, #conserve li, #plant li, #educate li{
         width: 100%;
+        font-size: 30px;
     }
     #volunteer, #plant{
         flex-flow: column-reverse;
+    }
+    #reduce img, #volunteer img, #conserve img, #plant img, #educate img {
+        width: 200px;
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
+        justify-self: center;
     }
 }
 .action-call{
@@ -369,7 +396,7 @@ header{
 }
 
 .action-call a:hover{
-    transition: all 2s;
+    transition: all 2s ease;
     background-color: rgb(53, 180, 53);
 }
 
@@ -398,7 +425,11 @@ header{
 }
 
 .testimonial img{
-    border-radius: 20px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .testimonial p{
@@ -484,4 +515,30 @@ footer img {
     footer p{
         width: 350px;
     }
+    footer img{
+        width: 300px;
+    }
 }
+
+/* Scroll bar customization */
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgb(42, 51, 94);
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #fde047;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fddf47cc;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.7;
+  }
